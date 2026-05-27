@@ -1,44 +1,66 @@
-# E-Commerce Retention Strategy: LTV Optimization & Churn Analysis
-**Persona:** Product Manager (Retention & Growth)  
-**Impact:** Identified $20.6M in "At-Risk" Revenue and defined a 6-call friction threshold.
+# E-Commerce Retention Strategy
 
-## 📌 Executive Summary
-This project analyzes behavioral and transactional data from 50,000+ e-commerce users to identify why high-value customers churn. By using RFM segmentation and correlation analysis, I identified that churn is not driven by price, but by **service friction**. 
+## Overview
+Analyzed behavioral and transaction data from 50,000+ e-commerce users to identify why high-value customers churn.
 
-### Key Business Metrics:
-* **Overall Churn Rate:** 28.9%
-* **Total Revenue at Risk:** $20,597,365 (LTV)
-* **AOV of Churned Users:** $134.76 (Higher than retained users)
+The analysis showed churn was driven more by support friction and poor onboarding than pricing.
+
+## Key Metrics
+- **Churn Rate:** 28.9%
+- **Revenue at Risk:** $20.6M (Customer LTV)
+- **Average Order Value of Churned Users:** $134.76
 
 ---
 
-## 📊 Key Insights
+# Key Insights
 
-### 1. The "Breaking Point" (Service Friction)
-Churn probability increases drastically once a customer reaches **6 service calls**. At this threshold, churn likelihood exceeds 40%.
+## 1. Support Friction Drives Churn
+Customer churn increased sharply after **6 support calls**.
+
+- Churn probability exceeded 40% beyond this point
+- Repeated support interactions indicated unresolved issues
+- High-value users were also affected
+
 ![Breaking Point](./images/breaking_point.png)
 
-### 2. The "At-Risk Whale" Segment
-Using RFM Analysis, I identified that our highest-spending customers are "Quiet Churners." They don't call support; they simply stop logging in. 
+---
+
+## 2. High-Value Customers Quietly Churned
+RFM segmentation identified a group of high-spending users who gradually stopped engaging instead of contacting support.
+
+- Reduced login activity was a strong churn signal
+- Many churned users had high historical spend
+- This segment represented the largest revenue risk
+
 ![Revenue at Risk](./images/revenue_at_risk.png)
 
-### 3. The Activation Gap
-New users with low Mobile App adoption are 3x more likely to churn within the first 90 days.
+---
+
+## 3. Weak Mobile Adoption Increased Early Churn
+New users with low mobile app usage were significantly more likely to churn within the first 90 days.
+
+- App adoption strongly correlated with retention
+- Email onboarding showed low engagement
+- Early activation gaps predicted long-term churn
+
 ![Activation Gap](./images/activation_gap.png)
 
 ---
 
-## 🛠 Strategic Roadmap (Proposed Interventions)
+# Proposed Retention Strategy
 
-### Phase 1: Support Logic Refactoring (Short Term)
-* **Priority Routing:** Flag users with >$130 AOV in the CRM to bypass basic support queues and reach Senior Agents.
-* **Proactive Outreach:** Automate a "Service Recovery" credit for any user reaching their 4th support call to prevent them from hitting the "6-call breaking point."
+## Phase 1: Reduce Support Friction
+- Route users with AOV > $130 directly to senior support agents
+- Trigger proactive recovery offers after the 4th support call
+- Reduce escalation loops and unresolved tickets
 
-### Phase 2: Mobile-First Activation (Mid Term)
-* **Onboarding Pivot:** Shift new user "Welcome" sequences from Email (10% open rate) to SMS/Push-driven app downloads to improve early-stage retention.
+## Phase 2: Improve Early Activation
+- Shift onboarding from email-heavy flows to SMS/push notifications
+- Increase mobile app adoption during the first 90 days
+- Focus onboarding around early engagement actions
 
 ---
 
-## 💻 Tech Stack
-* **Python:** Pandas, Matplotlib, Seaborn (EDA & Visualization)
-* **Frameworks:** RFM Segmentation, Cohort Analysis
+# Tech Stack
+- **Python:** Pandas, Matplotlib, Seaborn
+- **Methods:** RFM Segmentation, Cohort Analysis
